@@ -24,6 +24,16 @@
             padding: 10px;
             margin-top: 10px;
         }
+        .teste{
+            background-color: chartreuse;
+            width: 200px;
+            height: 200px;
+            margin: auto;
+            text-align: center;
+            color: white;
+            line-height: 200px;
+        }
+    
     </style>
 </head>
 <body>
@@ -36,11 +46,30 @@
             <h2>Capitulo 1</h2>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur, cum fugit? Deserunt, vitae molestiae mollitia ducimus eos aliquam, enim saepe fuga perspiciatis impedit veritatis dolores ullam inventore omnis fugit Lorem ipsum dolor  amet consectetur adipisicing elit. Quas deserunt obcaecati nesciunt, quasi non ipsum in consectetur quos excepturi, provident rerum nihil quisqua odit libero doloremque expedita, harum perferendis magni?</p>
         </div>
-        <br>
+        
+        <div class="teste">
+            bem vindo
+        </div>
     </main>
+
     <script>
-         var m = document.querySelector('div>p')
-         m.style.color='blue'
+        
+        
+         var b = document.querySelector('div.teste')
+        b.addEventListener('click', clicar)
+        b.addEventListener('mouseenter', entrar)
+        b.addEventListener('mouseout', sair)
+         function clicar(){
+            b.innerText = 'clicou'
+            b.style.background = 'red'
+         }
+         function entrar(){
+            b.innerText = 'entrou'
+         }
+         function sair(){
+            b.innerText = 'saiu'
+            b.style.background = 'chartreuse'
+         }
         
 
      </script>
