@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        header{
+            background-color: blue;
+            color: white;
+            margin: -8px;
+            padding: 20px;
+        }
+        body{
+            background-color: cornflowerblue;
+        }
+        main{
+            min-width: 320px;
+            max-width: 1000px;
+            background-color: white;
+            margin: auto;
+            padding-bottom: 200px;
+            padding-left: 20px;
+            padding-top: 20px;
+            margin-top: 20px;
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+
+        }
+        input{
+            font-size: larger;
+            margin: auto;
+        }
+        #num1,#num2{
+            max-width: 200px;
+            min-width: 100px;
+            text-align: center;
+            margin: auto;
+        }
+        div{
+            margin: auto;
+           
+        }
+        div>input{
+            display: inline;
+            margin: 10px;
+            text-align: center;
+        }
+        #res{
+            text-align: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bem vindos a calculadora virtual</h1>
+    </header>
+    <main>
+        <h1>Somar e Subtrair</h1>
+        <div>
+            <input type="number" name="num1" id="num1"> + / - / % / x
+            <input type="number" name="num2" id="num2">
+            <div>
+                <input type="button" value="somar" id="somar">
+                <input type="button" value="subtrair" id="subtrair">
+                <input type="button" value="dividir" id="dividir">
+                <input type="button" value="multiplicar" id="multiplicar">
+                <p id="res">Resultado</p>
+            </div>
+        </div>
+    </main>
+    <script>
+        var cn1 = document.getElementById('num1')
+        var cn2 = document.getElementById('num2')
+        var somar = document.getElementById('somar')
+        var subtrair = document.getElementById("subtrair")
+        var dividir = document.getElementById('dividir')
+        var multiplicar = document.getElementById('multiplicar')
+
+
+        function soma(){
+            var n1 = Number(cn1.value)
+            var n2 = Number(cn2.value)
+            var som = n1 + n2
+            var res = document.getElementById('res')
+            res.innerText = ( '= ' + som)
+        }
+
+        function subtrai(){
+            var n1 = Number(cn1.value)
+            var n2 = Number(cn2.value)
+            var sub = n1 - n2
+            var res = document.getElementById('res')
+            res.innerText = ( '= ' + sub)
+        }
+
+        function dividi(){
+            var n1 = Number(cn1.value)
+            var n2 = Number(cn2.value)
+            var div = n1/n2
+            var res = document.getElementById('res')
+            res.innerText = ( '= ' + div)
+        }
+
+        function multiplica(){
+            var n1 = Number(cn1.value)
+            var n2 = Number(cn2.value)
+            var mult = n1*n2
+            var res = document.getElementById('res')
+            res.innerText = ('= ' + mult)
+        }
+        
+        somar.addEventListener('click',soma)
+        subtrair.addEventListener('click',subtrai)
+        dividir.addEventListener('click',dividi)
+        multiplicar.addEventListener('click',multiplica)
+    </script>
+</body>
+</html>
