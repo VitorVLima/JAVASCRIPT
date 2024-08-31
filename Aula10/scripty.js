@@ -35,7 +35,7 @@ function verificar(){
                 img.setAttribute('src', 'idosa.jfif')
             }
         }
-        res.innerHTML = 'Detectamos: Idade ' + idade  + ' do genero ' + genero
+        res.innerHTML = 'Detectamos: I  dade ' + idade  + ' do genero ' + genero
         res.appendChild(img)
     }
 

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header><h1>Conversor de Tempeturas</h1></header>
+    <main><p>Selecione a unidade de medida que deseja converter:</p>
+        <p><input type="radio" name="rdtem" id="cel" checked>
+            <label for="cel">Celsius</label>
+            <input type="radio" name="rdtem" id="fah">
+            <label for="fah">Fahrenheit</label>
+            <input type="radio" name="rdtem" id="kel">
+            <label for="kel">Kelvin</label>
+        </p>
+        
+    <p><input type="number" name="temp" id="temp"> </p></main>
+    
+    
+    <main><p>Para: </p>
+        <p><input type="button" value="Celsius" id="cel1" onclick="vcelsius()">
+            <input type="button" value="Fahrenheit" id="fah1" onclick="vfah()">
+    <input type="button" value="Kelvin" id="kel1" onclick="vkelvin()">
+    
+        </p>
+        <p id="res">-</p>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
