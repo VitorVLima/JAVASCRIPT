@@ -7,19 +7,21 @@ function verificar(){
     var fim = Number(ffim.value)
     var passo = Number(fpasso.value)
     var res = document.getElementById('res')
+    res.textContent = ''
     if(finicio.value.length==0 || ffim.value.length==0 || fpasso.value.length==0){
         res.textContent = 'IMPOSSÍVEL REALIZAR A OPERAÇÃO'
-    }else{
-        if(fim>inicio)
+        return
+    }
+    if(fim>inicio)
         {   
-            for(var num=inicio;num<fim;num=num+passo){
-            res.textContent += num 
+            for(var num=inicio;num<=fim;num=num+passo){
+            res.textContent += num + ' '
             }
         }else{
-            for(var num=fim;num<inicio;num=num-passo){
-                res.textContent += num 
+            for(var num=inicio;num>=fim;num=num-passo){
+                res.textContent += num + ' '
                 }
         }
 
         }
-    }
+    
